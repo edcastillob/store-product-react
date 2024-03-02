@@ -7,7 +7,7 @@ export const associateProductToStore = (productId, storeId) => {
   return async (dispatch) => {
     try {
       const response = await axios.post(`${endpoint}product/${productId}/store/${storeId}`);
-      console.log(response);
+      // console.log(response);
       if (response.data.success === false) {
         toast.error(`${response.data.error}`);
         return;
@@ -31,7 +31,7 @@ export const associateStoreToProduct = (storeId, productId) => {
   return async (dispatch) => {
     try {
       const response = await axios.post(`${endpoint}product/${productId}/store/${storeId}`);
-      console.log(response);
+      // console.log(response);
       if (response.data.success === false) {
         toast.error(`${response.data.error}`);
         return;
@@ -55,7 +55,7 @@ export const updateProductStoreAssociation = (productId, storeId) => {
   return async (dispatch) => {
     try {
       const response = await axios.put(`${endpoint}product/${productId}/stores`, { storeId });
-      console.log(response);
+      // console.log(response);
       if (response.data.success === false) {
         toast.error(`${response.data.error}`);
         return;
@@ -79,7 +79,7 @@ export const deleteProductStoreAssociation = (productId, storeId) => {
   return async (dispatch) => {
     try {
       const response = await axios.delete(`${endpoint}product/${productId}/store/${storeId}`);
-      console.log(response);
+      // console.log(response);
       if (response.data.success === false) {
         toast.error(`${response.data.error}`);
         return;

@@ -27,7 +27,7 @@ export const allProducts = () => {
     return async (dispatch) => {
       try {
         const response = await axios.post(`${endpoint}products/create`, productData);
-        console.log(response)
+        // console.log(response)
         if(response.data.success == false){
           toast.error(`${response.data.error}`)
           return
@@ -73,7 +73,7 @@ export const allProducts = () => {
     return async (dispatch) => {
       try {
         const response = await axios.put(`${endpoint}products/update/${productId}`, updatedProductData);
-        console.log(response);
+        // console.log(response);
         if (response.data.success === false) {
           toast.error(`${response.data.error}`);
           return;
@@ -100,7 +100,7 @@ export const allProducts = () => {
     return async (dispatch) => {
         try {
             const response = await axios.delete(`${endpoint}products/${productId}`);
-            console.log(response);
+            // console.log(response);
             if (response.data.success === false) {
                 toast.error(`${response.data.error}`);
                 return;
